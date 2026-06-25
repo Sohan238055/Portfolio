@@ -1,38 +1,231 @@
-.App {
+
+
+
+.links nav {
+  display: flex;
+  gap: 20px;   
+  justify-content: flex-end;
+  background-attachment: fixed;
+  background-color: black;
+  padding: 15px 30px;
+  margin-bottom: 20px;
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  
+}
+
+
+
+.links a{
+   
+  background-color: #007BFF; /* blue */
+  color: white;
+  padding: 10px 20px;
+  border: solid 0.5px black;
+  border-radius: 6px;
+  margin-right:40px;
+  text-decoration:none ;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 0; /* remove 1300px */
+}
+
+
+#hero{
+  background-color: #08213c;
+  margin-top: -25px;
+  padding-top: 120px;
+
+
+}
+
+#ti{
+    color:aliceblue;
+    margin-bottom: 60px;
+    margin-top: -35px;
+    padding-bottom:30px ;
+    
+}
+
+#abt{
+  color:aliceblue;
+  font-size: 25px;
+  margin-top: -50px;
+  font-family:'Times New Roman', Times, serif
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+
+}
+
+.text {
+  flex: 1;
+}
+
+
+
+
+.main{
+  width: 300px;
+  display: flex;
+  
+  background-color: azure;
+  margin-top: 30px;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,0.1);
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+
+
+.main:hover{
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.658); /* X-offset, Y-offset, blur, color */
+  transform: translateY(-5px);            /* optional lift effect */
+  transition: all 0.3s ease;              /* smooth animation */
+}
+
+
+
+
+#text{
+  display: flex;
+  flex-direction: row;
+  gap:50px;
+  padding-left: 100px;
+}
+
+
+#skills {
+  background-color: #f5f5f5;   /* softer neutral background */
+  padding: 60px 40px;
+  border-radius: 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#skills h1 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #333;
+  letter-spacing: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#con {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: center;   /* centers the two boxes */
+  gap: 40px;                 /* space between columns */
+}
+
+#web, #programming {
+  flex: 1;
+  background-color: #e0f7fa; /* light teal accent */
+  border: solid 2px #007BFF; /* subtle blue border */
+  border-radius: 25px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+#web:hover, #programming:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3); /* X-offset, Y-offset, blur, color */
+  transform: translateY(-5px);            /* optional lift effect */
+  transition: all 0.3s ease;              /* smooth animation */
+}
+
+
+#web ul, #programming ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#web li, #programming li {
+  
+  margin: 10px 0;
+  font-size: 18px;
+  color: #444;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#web li:hover, #programming li:hover {
+  transform: translateX(5px);
+  color: #007BFF;   /* highlight on hover */
+}
+
+
+
+
+#contact {
+  background-color: #ffffff;       /* clean white box */
+  padding: 40px;
+  margin: 40px auto;
+  max-width: 600px;                /* keeps it centered and neat */
+  border-radius: 12px;             /* rounded corners */
+  border: 1px solid #ddd;          /* subtle border */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* soft shadow for depth */
+  text-align: center;
+}
+
+#contact h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+#contact h2 {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #555;
+}
+
+#contact a {
+  color: #007BFF;                  /* blue accent for email */
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+#contact a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+
+
+#footer {
+  background-color: #333333;   /* dark footer */
   color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 0;               /* flush with contact box */
 }
 
-.App-link {
-  color: #61dafb;
+#footer p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ccc;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#footer a {
+  color: #ddd;
+  margin: 0 12px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+#footer a:hover {
+  color: #fff;                 /* highlight on hover */
 }
